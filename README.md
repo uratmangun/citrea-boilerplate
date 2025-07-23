@@ -1,15 +1,17 @@
-# React Kiro Starter
+# Citrea Boilerplate
 
-A modern, production-ready React starter template built with Vite, TypeScript, Supabase, and shadcn/ui. This template provides a solid foundation for building scalable web applications with modern tooling and best practices.
+A modern, production-ready React starter template for building Citrea blockchain applications. Built with Vite, TypeScript, Privy authentication, and Tailwind CSS. This template provides a solid foundation for building scalable Web3 applications on the Citrea network with wallet integration and blockchain connectivity.
 
 ## ✨ Features
 
 - ⚡ **Vite** - Fast build tool with HMR and optimized production builds
 - ⚛️ **React 19** - Latest React with modern features
 - 🔷 **TypeScript** - Full type safety and IntelliSense support
-- 🗄️ **Supabase** - Backend-as-a-Service with database and authentication
-- 🎨 **shadcn/ui** - Beautiful, accessible UI components
-- 🎯 **Tailwind CSS** - Utility-first CSS framework
+- 🔐 **Privy** - Web3 authentication and wallet management
+- 🌐 **Citrea Integration** - Ready-to-use Citrea testnet configuration
+- 💰 **Wallet Balance Display** - Real-time balance fetching with 18-decimal precision
+- 🔄 **viem** - Type-safe Ethereum interactions
+- 🎯 **Tailwind CSS** - Utility-first CSS framework with custom amber theme
 - 🧪 **Vitest** - Fast unit testing with React Testing Library
 - 📏 **ESLint & Prettier** - Code quality and formatting
 - 🔄 **React Router** - Client-side routing
@@ -20,7 +22,7 @@ A modern, production-ready React starter template built with Vite, TypeScript, S
 ### Prerequisites
 
 - Node.js 18+ or Bun
-- A Supabase project (create one at [supabase.com](https://supabase.com))
+- A Privy app ID (create one at [privy.io](https://privy.io))
 - GitHub CLI (optional, for template usage)
 
 ### Creating a New Project from Template
@@ -29,16 +31,16 @@ A modern, production-ready React starter template built with Vite, TypeScript, S
 
 ```bash
 # Create a new repository from this template
-gh repo create my-awesome-project --template uratmangun/react-kiro-starter --public
+gh repo create my-citrea-app --template uratmangun/citrea-boilerplate --public
 
 # Clone your new repository
-gh repo clone my-awesome-project
-cd my-awesome-project
+gh repo clone my-citrea-app
+cd my-citrea-app
 ```
 
 #### Option 2: Using GitHub Web Interface
 
-1. Go to [github.com/uratmangun/react-kiro-starter](https://github.com/uratmangun/react-kiro-starter)
+1. Go to [github.com/uratmangun/citrea-boilerplate](https://github.com/uratmangun/citrea-boilerplate)
 2. Click the green **"Use this template"** button
 3. Choose **"Create a new repository"**
 4. Fill in your repository details and click **"Create repository"**
@@ -52,8 +54,8 @@ cd my-awesome-project
 
 ```bash
 # For contributing to this template or development purposes
-git clone https://github.com/uratmangun/react-kiro-starter.git
-cd react-kiro-starter
+git clone https://github.com/uratmangun/citrea-boilerplate.git
+cd citrea-boilerplate
 ```
 
 ### Installation
@@ -70,10 +72,9 @@ cd react-kiro-starter
    cp .env.example .env
    ```
    
-   Update `.env` with your Supabase credentials:
+   Update `.env` with your Privy App ID:
    ```env
-   VITE_SUPABASE_URL=your_supabase_project_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   VITE_PRIVY_APP_ID=your_privy_app_id
    ```
 
 3. **Start the development server**
@@ -91,14 +92,13 @@ cd react-kiro-starter
 ```
 src/
 ├── components/          # Reusable UI components
-│   ├── common/         # Common components
+│   ├── auth/           # Authentication components
 │   ├── layout/         # Layout components
-│   ├── providers/      # Context providers
-│   └── ui/            # shadcn/ui components
+│   ├── wallet/         # Wallet-related components
+│   └── ui/            # UI components
 ├── hooks/              # Custom React hooks
-├── lib/               # Utility libraries
-│   ├── supabase.ts    # Supabase client configuration
-│   └── supabase-errors.ts # Error handling utilities
+├── config/            # Configuration files
+│   └── citrea-chain.ts # Citrea network configuration
 ├── pages/             # Page components
 ├── types/             # TypeScript type definitions
 ├── test/              # Test utilities
@@ -123,31 +123,37 @@ src/
 | `bun type-check` | Check TypeScript types |
 | `bun check-all` | Run all checks (type, lint, format, test) |
 
-## 🗄️ Supabase Configuration
+## 🔐 Web3 Configuration
 
 ### Environment Setup
 
-1. Create a new project at [supabase.com](https://supabase.com)
-2. Go to Settings > API to find your project URL and anon key
-3. Update your `.env` file with these credentials
+1. Create a new app at [privy.io](https://privy.io)
+2. Go to your dashboard to find your App ID
+3. Update your `.env` file with your credentials
 
-### Database Schema
+### Wallet Integration
 
-The project includes TypeScript types for your database schema in `src/types/database.ts`. Update this file to match your Supabase database structure.
+The project includes:
+- **Wallet Connection**: Privy handles wallet authentication
+- **Balance Display**: Real-time balance fetching with full 18-decimal precision
+- **Network Management**: Automatic Citrea testnet configuration
+- **Chain Switching**: Seamless network switching capabilities
 
-### Authentication
+### Citrea Network
 
-The Supabase client is configured with:
-- Auto token refresh
-- Session persistence
-- URL session detection
+The application is pre-configured for Citrea testnet with:
+- RPC endpoints
+- Chain ID configuration
+- Native token (cBTC) support
+- Block explorer integration
 
 ### Error Handling
 
-The project includes comprehensive error handling utilities in `src/lib/supabase-errors.ts` with:
-- Retry mechanisms
-- Error logging
-- User-friendly error messages
+The project includes comprehensive error handling for:
+- Wallet connection failures
+- Network switching errors
+- Balance fetching issues
+- Transaction failures
 
 ## 🎨 UI Components
 
@@ -192,8 +198,8 @@ bun test:ui
 ## 📦 Technologies Used
 
 - **Frontend**: React 19, TypeScript, Vite
-- **Styling**: Tailwind CSS, shadcn/ui, Radix UI
-- **Backend**: Supabase
+- **Styling**: Tailwind CSS, Lucide React icons
+- **Web3**: Privy, viem, Citrea network
 - **Routing**: React Router DOM
 - **Testing**: Vitest, React Testing Library
 - **Code Quality**: ESLint, Prettier
