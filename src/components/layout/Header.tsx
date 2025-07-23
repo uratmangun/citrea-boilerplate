@@ -3,10 +3,14 @@ import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { AuthenticationButton } from '@/components/auth/AuthenticationButton'
+import { UserProfile } from '@/components/auth/UserProfile'
+import { usePrivy } from '@privy-io/react-auth'
 
 export default function Header() {
   const location = useLocation()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { authenticated } = usePrivy()
 
   const isActive = (path: string) => location.pathname === path
 
@@ -47,6 +51,13 @@ export default function Header() {
 
           {/* Right side actions */}
           <div className="flex items-center space-x-2">
+            {/* Authentication Components */}
+            {authenticated ? (
+              <UserProfile />
+            ) : (
+              <AuthenticationButton />
+            )}
+            
             <ThemeToggle />
             
             {/* Mobile menu button */}
