@@ -1,6 +1,5 @@
 ---
-name: "Kiro Specification Generation Requirements"
-activation_mode: "always_on"
+trigger: model_decision
 description: "Mandates creation of comprehensive Kiro specifications for all development plans following the three-file format"
 ---
 

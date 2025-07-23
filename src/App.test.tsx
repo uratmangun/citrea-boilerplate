@@ -6,7 +6,7 @@ test('renders navigation header', async () => {
   render(<App />)
   
   // Check for navigation elements
-  expect(screen.getByText('Vite App')).toBeInTheDocument()
+  expect(screen.getByText('citrea')).toBeInTheDocument()
   expect(screen.getByText('Home')).toBeInTheDocument()
   expect(screen.getByText('About')).toBeInTheDocument()
 })

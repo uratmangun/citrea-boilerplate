@@ -1,9 +1,8 @@
 ---
-name: "Supabase Database Migration Standards"
-activation_mode: "always_on"
+trigger: model_decision
 description: "Establishes procedures for applying database migrations directly via Docker container operations"
 ---
----
+
 
 # Supabase Migration Standards
 

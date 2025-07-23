@@ -1,7 +1,7 @@
 import { usePrivy, useWallets } from '@privy-io/react-auth'
 import { useState, useCallback } from 'react'
 import { citreaTestnet } from '@/config/citrea-chain'
-import { formatEther } from 'viem'
+import { formatEther, createPublicClient, http } from 'viem'
 
 export function useWalletManager() {
   const { user, authenticated } = usePrivy()
@@ -59,11 +59,25 @@ export function useWalletManager() {
     setError(null)
 
     try {
-      // For now, return a placeholder - balance fetching will be implemented when we test
-      // TODO: Implement proper balance fetching using Privy's wallet methods
+      // Create a public client using viem to fetch balance directly
+      const publicClient = createPublicClient({
+        chain: citreaTestnet,
+        transport: http(citreaTestnet.rpcUrls.default.http[0])
+      })
+
+      // Get balance using viem's public client
+      const balance = await publicClient.getBalance({
+        address: primaryWallet.address as `0x${string}`
+      })
+
+      // Convert from wei to ether and show full precision (18 decimals)
+      const balanceInEther = formatEther(balance)
+      const formattedBalance = balanceInEther
+      
       setIsLoading(false)
-      return '0.0'
+      return formattedBalance
     } catch (err) {
+      console.error('Balance fetch error:', err)
       const errorMessage = err instanceof Error ? err.message : 'Failed to fetch wallet balance'
       setError(errorMessage)
       setIsLoading(false)
