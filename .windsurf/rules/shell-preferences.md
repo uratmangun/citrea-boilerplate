@@ -1,10 +1,7 @@
 ---
-trigger: always_on
-description: Use fish shell syntax for ALL terminal commands. Never use bash syntax.
----
-
----
-inclusion: always
+name: "Fish Shell Execution Standards"
+activation_mode: "always_on"
+description: "Enforces fish shell syntax for all terminal commands and provides conversion patterns from bash"
 ---
 
 # Shell Execution Standards
