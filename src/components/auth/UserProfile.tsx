@@ -48,7 +48,7 @@ export function UserProfile() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="inline-flex items-center gap-2">
+        <Button variant="outline" className="inline-flex items-center gap-2 text-amber-800 border-amber-800 hover:bg-amber-50 dark:text-amber-400 dark:border-amber-400 dark:hover:bg-amber-950/20">
           <User className="h-4 w-4" />
           <span className="hidden sm:inline">{getUserDisplayName()}</span>
         </Button>

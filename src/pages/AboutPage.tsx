@@ -18,14 +18,14 @@ export default function AboutPage() {
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">About</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 bg-clip-text text-transparent">About</h1>
         <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto">
           Configuration details for connecting to the Citrea Testnet.
         </p>
       </div>
 
       <div className="p-4 sm:p-6 border rounded-lg bg-card text-card-foreground">
-        <h3 className="text-lg font-semibold mb-3">Chain Information</h3>
+        <h3 className="text-lg font-semibold mb-3 text-amber-700 dark:text-amber-400">Chain Information</h3>
         <p className="text-sm text-muted-foreground mb-4">
           Here are the configs that you can use to connect to the Citrea Testnet:
         </p>

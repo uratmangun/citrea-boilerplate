@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { AuthenticationButton } from '@/components/auth/AuthenticationButton'
 import { UserProfile } from '@/components/auth/UserProfile'
 import { usePrivy } from '@privy-io/react-auth'
+import { BitcoinIcon } from '@/components/icons'
 
 export default function Header() {
   const location = useLocation()
@@ -23,10 +24,10 @@ export default function Header() {
           {/* Logo/Brand */}
           <div className="flex items-center space-x-2">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">V</span>
+              <div className="h-8 w-8 rounded-lg flex items-center justify-center">
+                <BitcoinIcon size={24} className="" />
               </div>
-              <span className="font-bold text-lg hidden sm:block">citrea</span>
+              <span className="font-bold text-lg hidden sm:block bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 bg-clip-text text-transparent">citrea</span>
             </Link>
           </div>
 
@@ -36,6 +37,7 @@ export default function Header() {
               variant={isActive('/') ? 'default' : 'ghost'}
               size="sm"
               asChild
+              className={!isActive('/') ? 'text-amber-700 hover:text-amber-800 hover:bg-amber-50 dark:text-amber-400 dark:hover:text-amber-300 dark:hover:bg-amber-950/20' : ''}
             >
               <Link to="/">Home</Link>
             </Button>
@@ -44,6 +46,7 @@ export default function Header() {
               variant={isActive('/about') ? 'default' : 'ghost'}
               size="sm"
               asChild
+              className={!isActive('/about') ? 'text-amber-700 hover:text-amber-800 hover:bg-amber-50 dark:text-amber-400 dark:hover:text-amber-300 dark:hover:bg-amber-950/20' : ''}
             >
               <Link to="/about">About</Link>
             </Button>
@@ -52,6 +55,7 @@ export default function Header() {
               variant={isActive('/ideas') ? 'default' : 'ghost'}
               size="sm"
               asChild
+              className={!isActive('/ideas') ? 'text-amber-700 hover:text-amber-800 hover:bg-amber-50 dark:text-amber-400 dark:hover:text-amber-300 dark:hover:bg-amber-950/20' : ''}
             >
               <Link to="/ideas">Ideas</Link>
             </Button>
@@ -93,7 +97,7 @@ export default function Header() {
                 variant={isActive('/') ? 'default' : 'ghost'}
                 size="sm"
                 asChild
-                className="justify-start"
+                className={`justify-start ${!isActive('/') ? 'text-amber-700 hover:text-amber-800 hover:bg-amber-50 dark:text-amber-400 dark:hover:text-amber-300 dark:hover:bg-amber-950/20' : ''}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <Link to="/">Home</Link>
@@ -103,7 +107,7 @@ export default function Header() {
                 variant={isActive('/about') ? 'default' : 'ghost'}
                 size="sm"
                 asChild
-                className="justify-start"
+                className={`justify-start ${!isActive('/about') ? 'text-amber-700 hover:text-amber-800 hover:bg-amber-50 dark:text-amber-400 dark:hover:text-amber-300 dark:hover:bg-amber-950/20' : ''}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <Link to="/about">About</Link>
@@ -113,7 +117,7 @@ export default function Header() {
                 variant={isActive('/ideas') ? 'default' : 'ghost'}
                 size="sm"
                 asChild
-                className="justify-start"
+                className={`justify-start ${!isActive('/ideas') ? 'text-amber-700 hover:text-amber-800 hover:bg-amber-50 dark:text-amber-400 dark:hover:text-amber-300 dark:hover:bg-amber-950/20' : ''}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <Link to="/ideas">Ideas</Link>
