@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { usePrivy } from '@privy-io/react-auth'
 import { useWalletManager } from '@/hooks/useWalletManager'
-import { Wallet, Globe, Loader2, RefreshCw } from 'lucide-react'
+import { Wallet, Globe, Loader2, RefreshCw, Copy, Check } from 'lucide-react'
 
 export function WalletInfo() {
   const { authenticated, user } = usePrivy()
@@ -14,6 +14,7 @@ export function WalletInfo() {
   
   const [balance, setBalance] = useState<string | null>(null)
   const [isLoadingBalance, setIsLoadingBalance] = useState(false)
+  const [isCopied, setIsCopied] = useState(false)
 
   // Fetch wallet balance when wallet is connected
   useEffect(() => {
@@ -35,6 +36,18 @@ export function WalletInfo() {
     }
   }
 
+  const copyToClipboard = async () => {
+    if (!walletAddress) return
+    
+    try {
+      await navigator.clipboard.writeText(walletAddress)
+      setIsCopied(true)
+      setTimeout(() => setIsCopied(false), 2000)
+    } catch (error) {
+      console.error('Failed to copy address:', error)
+    }
+  }
+
   // Don't render if wallet is not connected
   if (!authenticated || !user || !isConnected || !walletAddress) {
     return null
@@ -49,6 +62,17 @@ export function WalletInfo() {
         <Wallet className="h-4 w-4 text-amber-600" />
         <span className="text-amber-800 font-medium">Wallet:</span>
         <span className="text-amber-700 font-mono">{truncatedAddress}</span>
+        <button
+          onClick={copyToClipboard}
+          className="ml-1 p-1 rounded hover:bg-amber-100 transition-colors"
+          title="Copy full address"
+        >
+          {isCopied ? (
+            <Check className="h-3 w-3 text-green-600" />
+          ) : (
+            <Copy className="h-3 w-3 text-amber-600 hover:text-amber-700" />
+          )}
+        </button>
       </div>
 
       {/* Network */}

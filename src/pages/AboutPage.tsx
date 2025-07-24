@@ -20,76 +20,75 @@ export default function AboutPage() {
       <div className="text-center space-y-4">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">About</h1>
         <p className="text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto">
-          This is a modern full-stack web application built with cutting-edge technologies
-          to provide the best developer experience and user experience.
+          Configuration details for connecting to the Citrea Testnet.
         </p>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="p-4 sm:p-6 border rounded-lg bg-card text-card-foreground">
-          <h3 className="text-lg font-semibold mb-3">Frontend Stack</h3>
-          <ul className="text-sm space-y-2 text-muted-foreground">
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-primary rounded-full"></span>
-              Vite - Fast build tool
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-primary rounded-full"></span>
-              React 18+ - Modern UI library
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-primary rounded-full"></span>
-              TypeScript - Type safety
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-primary rounded-full"></span>
-              Tailwind CSS - Utility-first CSS
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-primary rounded-full"></span>
-              shadcn/ui - Component library
-            </li>
-          </ul>
-        </div>
-        
-        <div className="p-4 sm:p-6 border rounded-lg bg-card text-card-foreground">
-          <h3 className="text-lg font-semibold mb-3">Backend & Tools</h3>
-          <ul className="text-sm space-y-2 text-muted-foreground">
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-secondary rounded-full"></span>
-              Supabase - Backend as a Service
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-secondary rounded-full"></span>
-              PostgreSQL - Database
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-secondary rounded-full"></span>
-              Real-time subscriptions
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-secondary rounded-full"></span>
-              ESLint & Prettier - Code quality
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-secondary rounded-full"></span>
-              Vitest - Testing framework
-            </li>
-          </ul>
-        </div>
       </div>
 
       <div className="p-4 sm:p-6 border rounded-lg bg-card text-card-foreground">
-        <h3 className="text-lg font-semibold mb-3">UI Components Demo</h3>
+        <h3 className="text-lg font-semibold mb-3">Chain Information</h3>
         <p className="text-sm text-muted-foreground mb-4">
-          Click the button below to see skeleton loading states in action.
+          Here are the configs that you can use to connect to the Citrea Testnet:
         </p>
-        <div className="flex flex-wrap gap-2">
-          <Button onClick={simulateLoading} variant="outline">
-            Show Loading Skeleton
-          </Button>
-          <Button asChild>
-            <Link to="/">Back to Home</Link>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b">
+                <th className="text-left py-2 px-3 font-medium">Config</th>
+                <th className="text-left py-2 px-3 font-medium">Value</th>
+              </tr>
+            </thead>
+            <tbody className="text-muted-foreground">
+              <tr className="border-b">
+                <td className="py-2 px-3">Chain ID</td>
+                <td className="py-2 px-3 font-mono">5115</td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-2 px-3">Endpoint</td>
+                <td className="py-2 px-3">
+                  <a 
+                    href="https://rpc.testnet.citrea.xyz" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    https://rpc.testnet.citrea.xyz
+                  </a>
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-2 px-3">Explorer</td>
+                <td className="py-2 px-3">
+                  <a 
+                    href="https://explorer.testnet.citrea.xyz" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    https://explorer.testnet.citrea.xyz
+                  </a>
+                </td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-2 px-3">Chain Name</td>
+                <td className="py-2 px-3">Citrea Testnet</td>
+              </tr>
+              <tr>
+                <td className="py-2 px-3">Currency Symbol</td>
+                <td className="py-2 px-3">cBTC</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="mt-4 pt-4 border-t">
+          <p className="text-sm text-muted-foreground mb-2">Need testnet tokens?</p>
+          <Button asChild variant="outline">
+            <a 
+              href="https://citrea.xyz/faucet" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Visit Faucet
+            </a>
           </Button>
         </div>
       </div>
