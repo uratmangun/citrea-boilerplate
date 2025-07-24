@@ -1,8 +1,8 @@
 ---
-trigger: model_decision
-description: "Defines the standard process for deploying Supabase functions using Docker container operations"
+trigger: glob
+description: "Applies Supabase deployment rules for all files in supabase directories"
+globs: "**/supabase/**/*"
 ---
-
 
 # Supabase Edge Functions Deployment
 

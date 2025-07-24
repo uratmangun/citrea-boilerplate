@@ -1,6 +1,7 @@
 ---
+name: "Node.js Package Manager Standards"
 trigger: always_on
-description: "Enforces use of bun or pnpm for Node.js dependency management instead of npm"
+description: "Enforces use of bun or pnpm for Node.js dependency management, prohibits npm and yarn"
 ---
 
 # Node.js Package Manager Standards

@@ -1,8 +1,8 @@
 ---
-trigger: model_decision
-description: "Defines dynamic project ID detection and container naming patterns for Supabase operations"
+trigger: glob
+description: "Applies Supabase project configuration rules for supabase.toml files"
+globs: "**/supabase.toml"
 ---
-
 
 # Supabase Project Configuration
 

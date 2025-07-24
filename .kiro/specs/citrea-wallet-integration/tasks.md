@@ -1,9 +1,4 @@
-# Citrea Wallet Integration Implementation Plan
-
-## Task Overview
-This implementation plan covers the development of comprehensive wallet integration features for the Citrea Boilerplate template, including wallet information display, balance fetching, manual refresh capabilities, and template creation facilitation.
-
-## Implementation Tasks
+# Implementation Plan
 
 - [x] 1. Analyze Existing Wallet Infrastructure
   - Review current Privy authentication setup and wallet connection logic
@@ -93,20 +88,4 @@ This implementation plan covers the development of comprehensive wallet integrat
   - Verify mobile responsiveness and accessibility features
   - _Requirements: 1.5, 2.2, 3.3, 4.4_
 
-## Success Criteria
-- Wallet information displays correctly when wallet is connected (address, network, balance)
-- Balance shows full 18-decimal precision and updates via manual refresh
-- GitHub CLI command is easily accessible and copyable from the UI
-- Repository functions as a proper GitHub template with comprehensive documentation
-- All wallet operations handle errors gracefully with user-friendly feedback
-- Template creation process works seamlessly for new developers
-- Performance is optimized with no unnecessary re-renders or API calls
-- UI maintains consistent amber theming and responsive design across all components
 
-## Quality Standards Met
-- All user stories follow proper format with clear user types, goals, and benefits
-- Acceptance criteria use EARS notation (WHEN/THEN/SHALL) for precise requirements
-- Tasks are discrete, trackable, and include specific requirement references
-- Implementation covers all functional and non-functional requirements
-- Error handling and edge cases are thoroughly addressed
-- Documentation is comprehensive and developer-friendly
