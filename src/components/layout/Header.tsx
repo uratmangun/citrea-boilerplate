@@ -47,6 +47,14 @@ export default function Header() {
             >
               <Link to="/about">About</Link>
             </Button>
+            
+            <Button
+              variant={isActive('/ideas') ? 'default' : 'ghost'}
+              size="sm"
+              asChild
+            >
+              <Link to="/ideas">Ideas</Link>
+            </Button>
           </nav>
 
           {/* Right side actions */}
@@ -99,6 +107,16 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <Link to="/about">About</Link>
+              </Button>
+              
+              <Button
+                variant={isActive('/ideas') ? 'default' : 'ghost'}
+                size="sm"
+                asChild
+                className="justify-start"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <Link to="/ideas">Ideas</Link>
               </Button>
             </nav>
           </div>

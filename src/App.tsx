@@ -14,6 +14,7 @@ import { supportedChains } from '@/config/citrea-chain'
 // Lazy load pages for code splitting
 const HomePage = lazy(() => import('@/pages/HomePage'))
 const AboutPage = lazy(() => import('@/pages/AboutPage'))
+const IdeasPage = lazy(() => import('@/pages/IdeasPage'))
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'))
 
 function App() {
@@ -69,6 +70,16 @@ function App() {
                   <RouteErrorBoundary>
                     <Suspense fallback={<LoadingSpinner />}>
                       <AboutPage />
+                    </Suspense>
+                  </RouteErrorBoundary>
+                }
+              />
+              <Route
+                path="ideas"
+                element={
+                  <RouteErrorBoundary>
+                    <Suspense fallback={<LoadingSpinner />}>
+                      <IdeasPage />
                     </Suspense>
                   </RouteErrorBoundary>
                 }
