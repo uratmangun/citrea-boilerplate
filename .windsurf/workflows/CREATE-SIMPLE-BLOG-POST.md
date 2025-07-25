@@ -18,9 +18,9 @@ This workflow analyzes your project and generates a simple blog post highlightin
 
 5. **Analyze project type**: Determine if it's a web app, API, CLI tool, etc. based on file structure and dependencies.
 
-6. **Create demo content**: For web applications, use Puppeteer MCP to capture screenshots:
-   - Start the development server if it's a web app
-   - Take up to 3 screenshots of key pages/features
+6. **Create demo content**: For web applications with deployed URLs, capture screenshots:
+   - **IMPORTANT**: NEVER start local development servers - always use deployed URLs
+   - Use deployed website URLs for screenshots when available
    - For non-web projects, prepare repository embedding format
 
 7. **Create blog post**: Generate a comprehensive blog post with the following structure:
@@ -90,30 +90,12 @@ The blog post should be comprehensive, professional, and ready for customization
 4. Highlight how specifications guided the development process
 
 ### Demo Creation Process:
-1. **Check for deployed URLs using GitHub CLI**:
-   - Run `gh repo view --json url,homepageUrl` to get repository info
-   - Check for deployed URLs in repository homepage or description
-   - Look for deployment URLs in GitHub Pages, Netlify, Vercel, etc.
+1. **Get repository URL**:
+   - Use `gh repo view --json url -q .url` to get the repository URL
+   - If GitHub CLI is not available, extract repository URL from git remote: `git remote get-url origin`
+   - Use repository embedding format for all projects: `{% embed repository_url %}`
 
-2. **Setup Supabase Storage for Screenshots**:
-   - Create a 'blog-screenshots' bucket in Supabase storage
-   - Configure public access for the bucket
-   - Generate unique filenames using project name and timestamp
-
-3. **For web applications with deployed URLs**:
-   - Use Playwright MCP to navigate to the deployed URL
-   - Capture screenshots of key pages (max 3):
-     - Homepage/landing page
-     - Key feature pages (max 2 additional)
-   - Save screenshots to Supabase storage bucket
-   - Get public URLs for the uploaded images
-   - Include images in blog post using markdown: `![Description](supabase_public_url)`
-
-4. **For web applications without deployed URLs**:
-   - Use repository embedding format: `{% embed repository_url %}`
-   - Include repository URL from GitHub CLI or git remote
-
-5. **For non-web applications**:
+2. **For all applications**:
    - Use repository embedding format: `{% embed repository_url %}`
    - Include repository URL from GitHub CLI or git remote
 

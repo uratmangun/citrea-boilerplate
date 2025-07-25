@@ -1,190 +1,188 @@
-# Building React Kiro Starter: A Journey Through Modern Web Development
-
-*Published on July 23, 2025*
+# Citrea Boilerplate: A Modern React Starter for Blockchain Applications
 
 ## Introduction
 
-In the ever-evolving landscape of web development, creating a solid foundation for new projects can be both time-consuming and challenging. That's where React Kiro Starter comes in—a modern, production-ready React starter template that combines the best of today's web technologies to provide developers with a robust foundation for building scalable applications.
+Building blockchain applications can be complex, especially when you need to integrate wallet authentication, handle Web3 interactions, and create a seamless user experience. The Citrea Boilerplate eliminates these barriers by providing a production-ready React starter template specifically designed for building applications on the Citrea network.
 
-## What is React Kiro Starter?
+## What is Citrea Boilerplate?
 
-React Kiro Starter is a comprehensive starter template that brings together the most powerful and modern web development tools in a single, well-architected package. It's designed to eliminate the tedious setup process that developers face when starting new projects, allowing them to focus on building features rather than configuring tooling.
+Citrea Boilerplate is a modern, comprehensive React starter template that provides everything you need to build scalable Web3 applications on the Citrea blockchain network. Built with the latest technologies and best practices, it offers seamless wallet integration through Privy authentication, real-time balance fetching with 18-decimal precision, and a beautiful, responsive UI powered by Tailwind CSS and shadcn/ui components.
 
-The project serves as a bridge between the rapid prototyping needs of modern development and the production-ready requirements of scalable applications. Whether you're building a simple landing page or a complex web application, this starter provides the foundation you need.
+The boilerplate serves as a solid foundation for developers who want to focus on building their application logic rather than setting up the basic infrastructure. Whether you're building DeFi protocols, NFT marketplaces, gaming applications, or DAO tools, this template provides the essential building blocks to get started quickly.
 
 ## Tech Stack & Architecture
 
-The project leverages a carefully curated selection of modern technologies:
+The Citrea Boilerplate leverages a carefully curated set of modern technologies:
 
 ### Frontend & UI Technologies
-- **React 19** - The latest version of React with cutting-edge features and performance improvements
-- **TypeScript** - Full type safety and enhanced developer experience with IntelliSense
-- **Vite** - Lightning-fast build tool with Hot Module Replacement (HMR) for optimal development experience
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
-- **shadcn/ui** - Beautiful, accessible UI components built on Radix UI primitives
-- **Radix UI** - Unstyled, accessible component primitives
-- **Lucide React** - Beautiful, customizable icons
+- **React 19** - Latest React with modern features and improved performance
+- **TypeScript** - Full type safety and enhanced developer experience
+- **Vite** - Lightning-fast build tool with Hot Module Replacement
+- **Tailwind CSS** - Utility-first CSS framework with custom amber theme
+- **shadcn/ui** - Beautiful, accessible components built on Radix UI
+- **Lucide React** - Comprehensive icon library
+- **React Router** - Client-side routing for single-page applications
 
-### Backend & Database
-- **Supabase** - Backend-as-a-Service providing database, authentication, and real-time features
-- **PostgreSQL** - Robust relational database through Supabase
+### Blockchain & Web3 Technologies
+- **Privy** - Web3 authentication and wallet management
+- **viem** - Type-safe Ethereum interactions and utilities
+- **Citrea Integration** - Pre-configured testnet connectivity
 
-### Development & Testing Tools
-- **Vitest** - Fast unit testing framework with React Testing Library integration
-- **ESLint & Prettier** - Code quality enforcement and consistent formatting
-- **React Router DOM** - Client-side routing for single-page applications
-- **Bun** - Ultra-fast JavaScript runtime and package manager
+### Backend & Database Technologies
+- **Supabase** - Backend-as-a-Service with real-time capabilities
+- **PostgreSQL** - Robust relational database (via Supabase)
+
+### Development Tools
+- **Vitest** - Fast unit testing framework
+- **React Testing Library** - Testing utilities for React components
+- **ESLint & Prettier** - Code quality and formatting
+- **Bun** - Fast JavaScript runtime and package manager
+
+## Development Methodology: Kiro Specifications
+
+This project follows a rigorous spec-driven development approach using Kiro specifications, ensuring every feature is thoroughly planned, designed, and implemented with clear requirements and acceptance criteria.
+
+### Specifications Created:
+
+1. **Navigation Ideas Tab** - Added a dedicated Ideas section to showcase project concepts and inspiration for building on Citrea, complete with navigation integration and responsive design.
+
+2. **Homepage Redesign** - Transformed the homepage from a complex multi-section layout to a clean, focused introduction that immediately communicates the project's purpose to developers.
+
+3. **Citrea Wallet Integration** - Implemented comprehensive wallet connectivity with Privy authentication, real-time balance fetching, and seamless Web3 interactions.
+
+4. **Privy Citrea Integration** - Configured authentication system specifically for Citrea network with proper testnet settings and wallet management.
+
+5. **Vite React Supabase shadcn** - Established the foundational architecture combining Vite build system, React framework, Supabase backend, and shadcn/ui component library.
+
+Each specification follows the three-file Kiro format:
+- **Requirements**: User stories and acceptance criteria using EARS notation
+- **Design**: Technical architecture and implementation approach
+- **Tasks**: Discrete, trackable implementation steps with clear success criteria
 
 ## Key Features
 
-### 1. **Lightning-Fast Development Experience**
-The combination of Vite and React 19 provides an incredibly fast development experience with instant hot reloading, optimized builds, and minimal configuration overhead. Developers can see changes instantly without losing application state.
+1. **Wallet Authentication**: Seamless Web3 authentication powered by Privy, supporting multiple wallet providers with a clean, intuitive interface.
 
-### 2. **Type-Safe Database Operations**
-The integration with Supabase includes comprehensive TypeScript types for database operations, ensuring type safety from the database layer all the way to the UI. This prevents runtime errors and provides excellent IntelliSense support.
+2. **Real-time Balance Display**: Accurate balance fetching with 18-decimal precision, automatically updating when wallet connections change.
 
-### 3. **Production-Ready Architecture**
-The project includes robust error handling, loading states, route-based code splitting, and comprehensive testing setup. It's not just a starter—it's a foundation for production applications.
+3. **Responsive Design**: Mobile-first approach ensuring perfect functionality across all devices, from smartphones to desktop computers.
 
-### 4. **Accessible UI Components**
-Built on shadcn/ui and Radix UI, all components follow WCAG accessibility guidelines out of the box, ensuring your applications are inclusive and accessible to all users.
+4. **Type Safety**: Full TypeScript implementation providing compile-time error checking and enhanced developer experience.
 
-### 5. **Comprehensive Testing Setup**
-Includes Vitest with React Testing Library, coverage reporting, and UI testing capabilities, making it easy to maintain code quality as your project grows.
+5. **Modern UI Components**: Beautiful, accessible components from shadcn/ui with consistent design system and smooth animations.
 
-## Development Challenges & Solutions
+6. **Testing Infrastructure**: Comprehensive testing setup with Vitest and React Testing Library for reliable, maintainable code.
 
-### Challenge 1: Balancing Simplicity with Completeness
-**Problem**: Creating a starter template that's comprehensive enough to be useful but simple enough to understand and customize.
+## Demo
 
-**Solution**: We adopted a layered architecture approach where core functionality is immediately usable, but advanced features are clearly separated and documented. The project structure follows clear conventions, making it easy for developers to understand where to add their own code.
+### Homepage - Clean and Focused
+![Citrea Boilerplate Homepage](https://supabase.uratmangun.ovh/object/sign/screenshots/homepage-1753363362.png?token=eyJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzY3JlZW5zaG90cy9ob21lcGFnZS0xNzUzMzYzMzYyLnBuZyIsImlhdCI6MTc1MzM2MzQwMSwiZXhwIjoxNzg0ODk5NDAxfQ.6UTCpRuZxIZsQSUDsqqf0dXUpuoDRaPNtWPSEj9zp2k)
 
-### Challenge 2: Modern Tooling Integration
-**Problem**: Integrating multiple modern tools (Vite, React 19, Supabase, shadcn/ui) while ensuring they work seamlessly together.
+The homepage features a clean, centered design that immediately communicates the project's purpose. The minimalist approach ensures developers can quickly understand what the boilerplate offers without distractions.
 
-**Solution**: We carefully configured each tool to work optimally with the others. For example, the Vite configuration includes proper alias resolution for the project structure, optimized build settings, and development server configuration that works well with Supabase's local development setup.
+### Ideas Page - Project Inspiration
+![Ideas Page with Project Concepts](https://supabase.uratmangun.ovh/object/sign/screenshots/ideas-1753363387.png?token=eyJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzY3JlZW5zaG90cy9pZGVhcy0xNzUzMzYzMzg3LnBuZyIsImlhdCI6MTc1MzM2MzQxMCwiZXhwIjoxNzg0ODk5NDEwfQ.UnYUp8m4VZD_lTR7BtpeAEflzdTS8uGF-ujuc__I1Vc)
 
-### Challenge 3: Error Handling and Developer Experience
-**Problem**: Providing robust error handling without overwhelming developers with boilerplate code.
+The Ideas page showcases various project concepts that can be built on Citrea, including DeFi protocols, NFT marketplaces, gaming applications, and more. This provides inspiration and demonstrates the versatility of the boilerplate.
 
-**Solution**: We implemented a multi-layered error handling system with global error boundaries, route-specific error handling, and enhanced Supabase client with built-in retry logic and error transformation.
-
-## What I Learned
-
-### Technical Learning
-Working on this project deepened my understanding of React 19's new features, particularly the improved concurrent features and the new use hook. The integration with Vite taught me about modern build optimization and how to configure tools for optimal developer experience.
-
-### Best Practices
-The project reinforced the importance of:
-- **Type safety throughout the stack** - From database queries to UI components
-- **Proper error boundaries** - Graceful error handling that doesn't crash the entire application
-- **Code splitting and lazy loading** - Performance optimization from day one
-- **Comprehensive testing setup** - Making testing easy encourages better code quality
-
-### Problem Solving
-Building a starter template requires thinking about the needs of future developers who will use it. This taught me to balance opinionated choices with flexibility, providing sensible defaults while allowing easy customization.
-
-## Future Plans
-
-### Enhanced Features
-- **Authentication templates** - Pre-built login, signup, and profile management components
-- **Database migration tools** - Simplified database schema management
-- **Deployment configurations** - One-click deployment to popular platforms
-
-### Performance Improvements
-- **Advanced caching strategies** - Implement service workers and advanced caching
-- **Bundle optimization** - Further optimize build output for different deployment scenarios
-- **Progressive Web App features** - Add PWA capabilities for offline functionality
-
-### Developer Experience
-- **Interactive setup wizard** - Guided project configuration
-- **More UI component examples** - Expanded component library with real-world examples
-- **Documentation site** - Comprehensive documentation with interactive examples
+**Live Demo**: [https://cfeee2b8.citrea-boilerplate.pages.dev](https://cfeee2b8.citrea-boilerplate.pages.dev)
 
 ## Getting Started
 
-The project is designed for immediate productivity:
+### Prerequisites
+- Node.js 18+ or Bun
+- A Privy app ID (create one at [privy.io](https://privy.io))
+- GitHub CLI (optional, for template usage)
 
+### Quick Setup
+
+#### Option 1: Using GitHub CLI (Recommended)
 ```bash
-# Create from template
-gh repo create my-project --template uratmangun/react-kiro-starter
+# Create a new repository from this template
+gh repo create my-citrea-app --template uratmangun/citrea-boilerplate --public
 
+# Clone your new repository
+gh repo clone my-citrea-app
+cd my-citrea-app
+```
+
+#### Option 2: Using GitHub Web Interface
+1. Visit the [Citrea Boilerplate repository](https://github.com/uratmangun/citrea-boilerplate)
+2. Click "Use this template" → "Create a new repository"
+3. Clone your new repository and navigate to the project directory
+
+### Installation and Configuration
+```bash
 # Install dependencies
 bun install
 
-# Set up environment
-cp .env.example .env
-# Add your Supabase credentials
+# Copy environment variables
+cp .env.example .env.local
 
-# Start developing
+# Add your Privy App ID to .env.local
+VITE_PRIVY_APP_ID=your_privy_app_id_here
+
+# Start development server
 bun dev
 ```
 
-The development server starts on `http://localhost:3000` with hot reloading, and you're immediately ready to start building your application.
-
 ## Conclusion
 
-Building React Kiro Starter has been an exercise in understanding what modern web development should feel like. It's not just about using the latest technologies—it's about creating an experience where developers can focus on solving problems rather than fighting with tooling.
+The Citrea Boilerplate represents a significant step forward in Web3 development tooling. By combining modern React practices with blockchain-specific functionality, it eliminates the complexity typically associated with building Web3 applications. The spec-driven development approach using Kiro specifications ensures that every feature is well-planned, thoroughly tested, and properly documented.
 
-The project represents a snapshot of best practices in 2025, combining battle-tested technologies with cutting-edge tools. It's a foundation that grows with your project, from initial prototype to production application.
-
-Most importantly, it's a testament to the incredible ecosystem that has evolved around React and TypeScript, where powerful tools can be combined seamlessly to create exceptional developer experiences.
+Whether you're a seasoned blockchain developer or just starting your Web3 journey, this boilerplate provides the foundation you need to build production-ready applications on the Citrea network. The comprehensive testing suite, type safety, and modern architecture patterns make it suitable for both rapid prototyping and large-scale applications.
 
 ## Technical Deep Dive
 
 ### Project Structure
-The project follows a clear, scalable structure:
-
 ```
 src/
 ├── components/          # Reusable UI components
-│   ├── common/         # Common components (LoadingSpinner, ErrorBoundary)
-│   ├── layout/         # Layout components (Header, Footer, Navigation)
-│   ├── providers/      # Context providers (ThemeProvider)
-│   └── ui/            # shadcn/ui components
+│   ├── ui/             # shadcn/ui components
+│   └── layout/         # Layout components
+├── pages/              # Page components
 ├── hooks/              # Custom React hooks
-├── lib/               # Utility libraries and configurations
-├── pages/             # Page components with lazy loading
-├── types/             # TypeScript type definitions
-└── test/              # Test utilities and setup
+├── lib/                # Utility functions and configurations
+├── types/              # TypeScript type definitions
+└── styles/             # Global styles and Tailwind config
 ```
 
 ### Key Dependencies
 
-**Core Framework:**
+**Core Framework**:
 - `react@^19.1.0` - Latest React with concurrent features
-- `react-dom@^19.1.0` - React DOM renderer
 - `typescript@~5.8.3` - Type safety and developer experience
+- `vite@^7.0.4` - Fast build tool and development server
 
-**Build & Development:**
-- `vite@^7.0.4` - Fast build tool and dev server
-- `@vitejs/plugin-react@^4.6.0` - React integration for Vite
+**Web3 Integration**:
+- `@privy-io/react-auth@^2.20.0` - Wallet authentication
+- `viem@^2.33.0` - Ethereum interactions and utilities
 
-**UI & Styling:**
+**UI Framework**:
 - `tailwindcss@^3.4.0` - Utility-first CSS framework
 - `@radix-ui/react-*` - Accessible component primitives
-- `lucide-react@^0.525.0` - Beautiful icons
+- `lucide-react@^0.525.0` - Icon library
 
-**Backend Integration:**
-- `@supabase/supabase-js@^2.52.0` - Supabase client with TypeScript support
+**Backend Services**:
+- `@supabase/supabase-js@^2.52.0` - Backend-as-a-Service
 
-**Testing:**
-- `vitest@^3.2.4` - Fast test runner
-- `@testing-library/react@^16.3.0` - Component testing utilities
+**Testing & Quality**:
+- `vitest@^3.2.4` - Fast unit testing framework
+- `@testing-library/react@^16.3.0` - React testing utilities
+- `eslint@^9.30.1` - Code linting and quality
 
 ### Development Workflow
 
-The project includes comprehensive scripts for every stage of development:
+The development process follows a structured approach:
 
-1. **Development**: `bun dev` - Start with hot reloading
-2. **Type Checking**: `bun type-check` - Validate TypeScript
-3. **Linting**: `bun lint` - Code quality checks
-4. **Testing**: `bun test` - Run test suite
-5. **Building**: `bun build` - Production build
-6. **Quality Gate**: `bun check-all` - Run all checks before deployment
+1. **Specification Creation**: Every feature begins with a comprehensive Kiro specification defining requirements, design, and implementation tasks.
 
-This workflow ensures code quality and prevents issues from reaching production, while maintaining fast development cycles.
+2. **Type-Safe Development**: TypeScript ensures compile-time error checking and provides excellent IntelliSense support.
 
----
+3. **Component-Driven Architecture**: Reusable components built with shadcn/ui provide consistency and maintainability.
 
-*Ready to start your next project with React Kiro Starter? Check out the [repository](https://github.com/uratmangun/react-kiro-starter) and get building! 🚀*
+4. **Testing Integration**: Comprehensive test coverage with Vitest and React Testing Library ensures reliability.
+
+5. **Continuous Integration**: ESLint and Prettier maintain code quality and consistency across the project.
+
+The combination of modern tooling, comprehensive specifications, and best practices makes the Citrea Boilerplate an ideal starting point for any Web3 application development project.
