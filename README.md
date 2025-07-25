@@ -1,4 +1,4 @@
-# React Kiro Starter
+# Citrea Boilerplate
 
 A comprehensive, production-ready React starter template for building modern web applications with Citrea blockchain integration. This boilerplate combines the latest React ecosystem tools with Web3 capabilities, Supabase backend, and a complete development workflow.
 
